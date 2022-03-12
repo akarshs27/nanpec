@@ -1,4 +1,3 @@
-import React from "react";
 import NavLink from "../common/NavLink";
 
 const Navbar = () => {
@@ -11,16 +10,17 @@ const Navbar = () => {
   return (
     <div className="container mx-auto">
       <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <NavLink heading="Home" options={homeOptions} />
-        <NavLink heading="Industry Demands" options={industryOptions} />
-        <NavLink heading="National Educational Demands" options={nationalOptions} />
-        <NavLink heading="School Demands" options={schoolOptions} />
-        <a className="text-gray-600 text-base font-medium mr-5 hover:text-gray-900">Research Input</a>
-        <NavLink heading="Feedback" options={feedbackOptions} />
-        <a className="text-gray-600 text-base font-medium mr-5 hover:text-gray-900">Identification Gap</a>
-        <a className="text-gray-600 text-base font-medium mr-5 hover:text-gray-900">Demands Forecast</a>
-        <a className="text-gray-600 text-base font-medium mr-5 hover:text-gray-900">Services & Payment</a>
-        <a className="text-gray-600 text-base font-medium mr-5 hover:text-gray-900">Contact & Feedback</a>
+        <NavLink type="dropdown" text="Home" options={homeOptions} />
+        <NavLink type="dropdown" text="Industry Demands" options={industryOptions} />
+        <NavLink type="dropdown" text="National Educational Demands" options={nationalOptions} />
+        <NavLink type="dropdown" text="School Demands" options={schoolOptions} />        
+        <NavLink type="link" text="School Demands" />        
+        <NavLink type="link" text="Research Input" />        
+        <NavLink type="dropdown" text="Feedback" options={feedbackOptions} />
+        <NavLink type="link" text="Identification Gap" />
+        <NavLink type="link" text="Demands Forecast" />
+        <NavLink type="link" text="Services & Payment" />
+        <NavLink type="link" text="Contact & Feedback" />
       </nav>
     </div>
   );
